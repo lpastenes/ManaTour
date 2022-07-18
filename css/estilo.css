@@ -30,7 +30,7 @@ body {
 
 .lineaSuperior {
     grid-area: lineaSuperior;    
-    background-color: rgb(48, 48, 48);    
+    background-color: rgb(48, 48, 48);        
     font-size: 25px;
     letter-spacing: 20px;  
     text-align: center;    
@@ -41,8 +41,8 @@ body {
 }
 
 .mainHeader {
-    grid-area: mainHeader;
-    background-color: rgb(103, 187, 255);
+    background: linear-gradient(to top, rgb(7, 114, 236), white); /*gradiente*/
+    grid-area: mainHeader;    
     align-items: center;    
 }
 
@@ -78,7 +78,7 @@ ul li a:hover {
 .contenidoPrincipal {
     min-height: 90vh;    
     grid-area: contenidoPrincipal;
-    background: url("../img/lago.jpg");          
+    background: url("../img/lago.jpg");              
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -98,9 +98,24 @@ ul li a:hover {
     height: 200px;
     width: auto;
     background-color: black;
-    opacity: .5;    
+    opacity: .4;    
     font-size: 20px;
-    color: white;    
+    color: white;
+    animation-name: efecto;
+    animation-duration: 3s;
+    
+}
+
+@keyframes efecto {  /*animacion*/
+    0% {
+        opacity: .4;
+    }
+    50% {
+        opacity: .6;      
+    }
+    100% {
+        opacity: .8;      
+    }
 }
 
 .footer {
@@ -134,14 +149,16 @@ footer a{
     justify-items: center;        
 }
 
+.tours :hover {
+    transform: scale(1.05); /*transformacion*/
+}
 
 .tour {
     height: 400px;
     width: 300px;
     margin: 10px;
     border: 1px solid black;
-    border-radius: 20px;
-    
+    border-radius: 20px;    
     padding: 10px;    
     font-size: 18px;
     color: black;    
@@ -149,7 +166,17 @@ footer a{
     box-shadow: 2px 2px 2px rgb(97, 97, 97);       
 }
 
+.tours :active {
+    transition: height 2s, with 0.5s;   /*transiciones*/ 
+    height: 600px;
+    width: 500px;
+}
+
+
+
+
 .tour p {
+    
     text-align: justify;
 }
 
@@ -210,6 +237,9 @@ footer a{
     justify-items: center;        
 }
 
+.transfers :hover {
+    transform: scale(1.05); /*transformacion*/
+}
 
 .transfer {
     height: 400px;
