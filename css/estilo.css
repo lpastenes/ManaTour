@@ -1,0 +1,317 @@
+@import url('http://fonts.cdnfonts.com/css/berlin-sans-fb-demi');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    font-size: 16px;
+    text-align: center;    
+}
+
+.gridContenedor {
+    display: grid;    
+    grid-template-areas:
+    "lineaSuperior"
+    "mainHeader"
+    "contenidoPrincipal"    
+    "footer" ;
+          
+}
+
+.lineaSuperior {
+    grid-area: lineaSuperior;    
+    background-color: rgb(48, 48, 48);    
+    font-size: 25px;
+    letter-spacing: 20px;  
+    text-align: center;    
+}
+
+.lineaSuperior a {
+    color: white;
+}
+
+.mainHeader {
+    grid-area: mainHeader;
+    background-color: rgb(103, 187, 255);
+    align-items: center;    
+}
+
+.logo {    
+    margin-left: 20px; 
+}
+
+.contenidoHeader {      
+    justify-content: center;         
+}
+
+
+ul {    
+    height: auto;
+    padding: 10px;
+    display: block;
+    justify-content: space-around;         
+}  
+
+
+ul li a {
+    color: white;    
+    padding: 1px 10px;
+    font-size: 16px;           
+}
+
+ul li a:hover {
+    background: rgb(94, 94, 94);
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.contenidoPrincipal {
+    min-height: 90vh;    
+    grid-area: contenidoPrincipal;
+    background: url("../img/lago.jpg");          
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;      
+}
+
+.video {          
+    width: 320px;
+    height: 180px;
+    border: 1px solid black;
+    border-radius: 15px;
+    align-items: center;
+    margin: auto;
+}
+
+.textoPrincipal {
+    height: 200px;
+    width: auto;
+    background-color: black;
+    opacity: .5;    
+    font-size: 20px;
+    color: white;    
+}
+
+.footer {
+    grid-area: footer;
+    height: auto;
+    background-color: rgb(48, 48, 48);    
+    text-align: center;
+    color: white;    
+}
+
+footer p {
+    font-size: 25px;    
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+footer i{
+    font-size: 25px;
+    letter-spacing: 20px;
+}
+
+footer a{
+    color: white;
+}
+
+
+.tours {    
+    width: auto;
+    height: auto;      
+    padding: 10px;
+    justify-items: center;        
+}
+
+
+.tour {
+    height: 400px;
+    width: 300px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    
+    padding: 10px;    
+    font-size: 18px;
+    color: black;    
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    box-shadow: 2px 2px 2px rgb(97, 97, 97);       
+}
+
+.tour p {
+    text-align: justify;
+}
+
+
+
+.tour1 {    
+    background-image: url(../img/tour_santiago.jpg);  
+    background-repeat: no-repeat;
+    background-position: bottom; 
+}
+
+.tour2 {
+    background-image: url(../img/colchagua.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.tour3 {
+    background-image: url(../img/cajon_maipo.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.tour4 {
+    background-image: url(../img/valpo.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.tour5 {
+    background-image: url(../img/vina-del-mar.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.tour6 {
+    background-image: url(../img/vina-del-mar2.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.tour7 {
+    background-image: url(../img/beach.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.tour8 {
+    background-image: url(../img/oyster.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.transfers {    
+    width: auto;
+    height: auto;      
+    padding: 10px;
+    justify-items: center;        
+}
+
+
+.transfer {
+    height: 400px;
+    width: 300px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    
+    padding: 10px;    
+    font-size: 18px;
+    color: black;    
+    font-family: 'Berlin Sans FB Demi', sans-serif;
+    box-shadow: 2px 2px 2px rgb(97, 97, 97);       
+}
+
+.transfer p {
+    text-align: justify;
+}
+
+
+
+.transfer1 {    
+    background-image: url(../img/lan-chile.jpg);  
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.transfer2 {
+    background-image: url(../img/valle-nevado.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.transfer3 {
+    background-image: url(../img/laguna-del-inca.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.transfer4 {
+    background-image: url(../img/valpo2.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+
+@media only screen and (min-width:600px) {
+    .gridContenedor {
+        grid-template-areas:
+        "lineaSuperior lineaSuperior"
+        "mainHeader contenidoPrincipal"         
+        "footer footer";
+    }
+    .mainHeader {
+        display: block;
+    }
+    .tours {
+        display: grid;
+        grid-template-columns: 1fr;
+    } 
+    .transfers {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contenidoPrincipal iframe {
+        width: 600px;
+    }       
+}
+
+@media only screen and (min-width:1200px) {
+    .gridContenedor {
+        grid-template-areas:
+        "lineaSuperior"
+        "mainHeader"
+        "contenidoPrincipal"         
+        "footer";
+    }
+
+    ul {
+        display: flex;        
+    }
+
+    .contenidoPrincipal {    
+        display: block;    
+    }
+
+    .video {          
+        width: 640px;
+        height: 360px;
+    }
+
+    .mainHeader {
+        display: flex;
+    }
+    .tours {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .transfers {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }           
+}
+
+
